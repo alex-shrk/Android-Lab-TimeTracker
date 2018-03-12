@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ru.ssau.sanya.timetracker.Activity.MainActivity">
+
+    <Button
+        android:id="@+id/btnCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnPhoto"
+        android:layout_alignBottom="@+id/btnPhoto"
+        android:layout_marginEnd="18dp"
+        android:layout_toStartOf="@+id/btnRecord"
+        android:text="Category"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="45dp" />
+
+    <Button
+        android:id="@+id/btnPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/btnRecord"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="15dp"
+        android:text="Photo"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="120dp" />
+
+    <Button
+        android:id="@+id/btnStat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnCategory"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="48dp"
+        android:text="Statistic"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="304dp" />
+
+    <Button
+        android:id="@+id/btnRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnStat"
+        android:layout_alignBottom="@+id/btnStat"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="90dp"
+        android:text="Record"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="216dp" />
+</RelativeLayout>

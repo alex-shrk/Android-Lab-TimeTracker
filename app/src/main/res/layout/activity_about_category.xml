@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_about_category"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="ru.ssau.sanya.timetracker.Activity.AboutCategoryActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_about_category"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:scrollbars="vertical"
+
+        >
+
+
+        <TextView
+            android:id="@+id/about_categoryDescrView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="@string/category_descr_view" />
+
+        <TextView
+            android:id="@+id/about_categoryDescr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/about_categoryDescrView"
+            android:layout_marginTop="10dp"
+            android:textColor="#3b978d"
+            android:textSize="20sp" />
+
+
+
+
+
+        <TextView
+            android:id="@+id/about_categoryIconView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/about_categoryDescr"
+            android:layout_marginTop="10dp"
+            android:text="@string/icon_of_category" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/about_recycleView_iconsCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/about_categoryIconView"
+            android:layout_marginTop="10dp"
+            android:scrollbars="vertical">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
+

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context="ru.ssau.sanya.mettings.AddCategoryActivity">
+
+        <TextView
+            android:id="@+id/categoryNameView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/category_name_view" />
+
+        <EditText
+            android:id="@+id/categoryNameEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:layout_below="@+id/categoryNameView"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:id="@+id/categoryDescrView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/category_descr_view"
+            android:layout_below="@id/categoryNameEdit"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/categoryDescrEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:layout_below="@id/categoryDescrView"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:id="@+id/categoryIconView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/category_icon_view"
+            android:layout_below="@id/categoryDescrEdit"
+            android:layout_marginTop="20dp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/listIcons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/categoryIconView">
+        </android.support.v7.widget.RecyclerView>
+
+
+
+        <Button
+            android:id="@+id/btnCreateNewCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|bottom|center_horizontal|center"
+            android:text="@string/ok"
+            android:layout_below="@id/listIcons"
+            android:layout_marginTop="20dp"/>
+
+
+    </RelativeLayout>
+</ScrollView>

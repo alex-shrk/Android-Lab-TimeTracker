@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_about_record"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="ru.ssau.sanya.timetracker.Activity.AboutRecordActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_about_record"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_add_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        app:srcCompat="@android:drawable/ic_menu_camera" />
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:scrollbars="vertical"
+
+        >
+
+
+        <TextView
+            android:id="@+id/about_recordDescrView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="@string/record_descr_view" />
+
+        <TextView
+            android:id="@+id/about_recordDescr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/about_recordDescrView"
+            android:layout_marginTop="10dp"
+            android:textColor="#3b978d"
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:id="@+id/about_startTimeRecordView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/about_recordDescr"
+            android:layout_marginTop="10dp"
+            android:text="@string/starttime" />
+
+        <TextView
+            android:id="@+id/about_startTimeRecord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/about_startTimeRecordView"
+            android:layout_marginTop="10dp"
+            android:textColor="#3b978d"
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:id="@+id/about_endTimeRecordView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/about_startTimeRecord"
+            android:layout_marginTop="10dp"
+            android:text="@string/endtime" />
+
+
+        <TextView
+            android:id="@+id/about_endTimeRecord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/about_endTimeRecordView"
+            android:textColor="#3b978d"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/about_timestampRecordView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/about_endTimeRecord"
+            android:layout_marginTop="10dp"
+            android:text="@string/timestamp" />
+
+
+        <TextView
+            android:id="@+id/about_timestampRecord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/about_timestampRecordView"
+            android:textColor="#3b978d"
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:id="@+id/about_categoryRecordView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/about_timestampRecord"
+            android:layout_marginTop="10dp"
+            android:text="@string/category_of_record" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/about_recycleView_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/about_categoryRecordView"
+            android:layout_marginTop="10dp"
+            android:scrollbars="vertical">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/about_photosRecordView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/about_recycleView_category"
+            android:layout_marginTop="10dp"
+            android:text="@string/photos_of_record" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/about_recycleView_photos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/about_photosRecordView"
+            android:layout_marginTop="10dp"
+            android:scrollbars="vertical">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
+

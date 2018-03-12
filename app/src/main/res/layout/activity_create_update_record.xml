@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context="ru.ssau.sanya.mettings.AddRecordActivity">
+
+        <TextView
+            android:id="@+id/recordNameView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/record_name_view" />
+
+        <EditText
+            android:id="@+id/recordNameEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:layout_below="@+id/recordNameView"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:id="@+id/recordDescrView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/record_descr_view"
+            android:layout_below="@id/recordNameEdit"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/recordDescrEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:layout_below="@id/recordDescrView"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:id="@+id/startTimeRecordView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/starttimerecord"
+            android:layout_below="@id/recordDescrEdit"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:id="@+id/startDateRecord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/startdate"
+            android:textColor="#3b978d"
+            android:textSize="20sp"
+            android:layout_below="@id/startTimeRecordView"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/startTimeRecord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/startDateRecord"
+            android:layout_alignBottom="@+id/startDateRecord"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="190dp"
+            android:hint="@string/starttime"
+            android:textColor="#3b978d"
+            android:textSize="20sp" />
+
+
+
+        <TextView
+            android:id="@+id/endTimeRecordView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/endtimerecord"
+            android:layout_below="@id/startTimeRecord"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/endDateRecord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enddate"
+            android:textColor="#3b978d"
+            android:textSize="20sp"
+            android:layout_below="@id/endTimeRecordView"
+            android:layout_marginTop="20dp"
+            />
+
+        <TextView
+            android:id="@+id/endTimeRecord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/endtime"
+            android:textColor="#3b978d"
+            android:textSize="20sp"
+            android:layout_alignBaseline="@+id/endDateRecord"
+            android:layout_alignBottom="@+id/endDateRecord"
+            android:layout_alignStart="@+id/startTimeRecord"
+            />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list_records"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/endTimeRecord">
+        </android.support.v7.widget.RecyclerView>
+
+
+
+        <Button
+            android:id="@+id/btnCreateNewRecord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|bottom|center_horizontal|center"
+            android:text="@string/ok"
+            android:layout_below="@id/list_records"
+            android:layout_marginTop="40dp"/>
+
+
+    </RelativeLayout>
+</ScrollView>

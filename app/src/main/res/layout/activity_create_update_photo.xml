@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context="ru.ssau.sanya.mettings.AddPhotoActivity">
+
+
+        <ImageView
+            android:id="@+id/photoPreviewImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:contentDescription="@string/selectphoto"
+            android:src="@drawable/ic_live_tv_black_48dp" />
+
+
+        <TextView
+            android:id="@+id/photoDescrView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/photo_descr_view"
+            android:layout_below="@id/photoPreviewImageView"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/photoDescrEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:layout_below="@id/photoDescrView"
+            android:layout_marginTop="20dp"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list_photos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/photoDescrEdit">
+        </android.support.v7.widget.RecyclerView>
+
+
+
+
+
+        <Button
+            android:id="@+id/btnCreateNewPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|bottom|center_horizontal|center"
+            android:text="@string/ok"
+            android:layout_below="@id/list_photos"
+            android:layout_marginTop="40dp"/>
+
+
+    </RelativeLayout>
+</ScrollView>
